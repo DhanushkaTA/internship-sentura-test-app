@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserDto {
 
-    private int id;
+    private Integer id;
     private String uid;
     private String display_name;
     private String email;
@@ -24,12 +24,12 @@ public class UserDto {
     private String nickname;
     private String phone_number;
     private String comment;
-    private int directory_id;
-    private int picture_id;
+    private Integer directory_id;
+    private Integer picture_id;
     private String avatar_url;
     private Object metadata;
 
-    private List tags;
+    private List<String> tags;
 
     private String presence;
     private String created_at;
