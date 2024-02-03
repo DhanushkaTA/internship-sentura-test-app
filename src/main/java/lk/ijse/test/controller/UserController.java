@@ -25,7 +25,7 @@ public class UserController {
         return new ResponseUtil(200,"Ok........",null);
     }
 
-    @GetMapping(path = "save")
+    @PostMapping(path = "save")
     public ResponseUtil saveUser(@RequestBody UserDto user,@RequestHeader("Authorization") String token){
 
 
