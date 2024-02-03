@@ -18,4 +18,6 @@ public class UserController {
         return new ResponseUtil(200,"Ok........",null);
     }
 
+    @GetMapping(path = "save")
+
 }
