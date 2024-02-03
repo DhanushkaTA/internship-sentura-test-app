@@ -1,17 +1,19 @@
 package lk.ijse.test.controller;
 
+import lk.ijse.test.dto.UserDto;
+import lk.ijse.test.service.UserService;
 import lk.ijse.test.util.ResponseUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/user")
 @CrossOrigin
-@RequiredArgsConstructor
 public class UserController {
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping()
     public ResponseUtil getTestApi(){
@@ -19,5 +21,9 @@ public class UserController {
     }
 
     @GetMapping(path = "save")
+    public ResponseUtil saveUser(@RequestBody() UserDto user){
+
+        return new ResponseUtil(201,"User saved", null);
+    }
 
 }

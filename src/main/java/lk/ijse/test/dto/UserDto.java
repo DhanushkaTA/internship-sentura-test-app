@@ -1,33 +1,17 @@
 package lk.ijse.test.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@RequiredArgsConstructor
 public class UserDto {
-//    {
-//        "id": "0001",
-//            "uid": "u001",
-//            "display_name": "string",
-//            "email": "asd@gmail.com",
-//            "given_name": "string",
-//            "middle_name": "string",
-//            "name": "string",
-//            "family_name": "string",
-//            "nickname": "string",
-//            "phone_number": "string",
-//            "comment": "string",
-//            "directory_id": 10,
-//            "picture_id": "integer",
-//            "avatar_url": "string",
-//            "metadata": null,
-//            "tags": [
-//        "string"
-//  ],
-//        "presence": "string",
-//            "created_at": "string",
-//            "modified_at": "string",
-//            "is_suspended": false,
-//            "is_trashed": false
-//    }
 
     private int id;
     private String uid;
@@ -46,4 +30,10 @@ public class UserDto {
     private Object metadata;
 
     private List tags;
+
+    private String presence;
+    private String created_at;
+    private String modified_at;
+    private boolean is_suspended;
+    private boolean is_trashed;
 }
